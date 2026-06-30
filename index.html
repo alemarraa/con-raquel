@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Con Raquel — Spanish Tutoring & Classes | Rockville, MD</title>
+<meta name="description" content="Learn Spanish with Raquel Alonso Gonzalez — 25+ years teaching diplomats, USAID professionals, and foreign service officers. Private lessons and group classes in Rockville, MD and online.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --dark:        #1A0808;
+  --dark-mid:    #220E0E;
+  --dark-card:   #2C1414;
+  --dark-light:  #381A1A;
+  --red:         #C41C1C;
+  --red-light:   #E03030;
+  --red-pale:    rgba(196,28,28,0.09);
+  --orange:      #D45A1A;
+  --light:       #FDFAF6;
+  --light-alt:   #F5EEE8;
+  --card-bg:     #FFFFFF;
+  --border:      rgba(196,28,28,0.18);
+  --border-light:#EAD8D0;
+  --text:        #1A0808;
+  --text-mid:    #6A4444;
+  --text-muted:  #9A7070;
+  --cream:       #F8EEE0;
+  --cream-dim:   rgba(248,238,224,0.72);
+  --cream-muted: rgba(248,238,224,0.4);
+  --border-dim:  rgba(248,238,224,0.08);
+  --white:       #FFFFFF;
+  --amber:       #C41C1C;
+}
+html { scroll-behavior: smooth; }
+body { font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif; background: var(--light); color: var(--text); line-height: 1.5; overflow-x: hidden; }
+
+/* ── NAV ── */
+nav {
+  background: rgba(253,250,246,0.95);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border-light);
+  padding: 1.1rem 6%;
+  display: flex; justify-content: space-between; align-items: center;
+  position: sticky; top: 0; z-index: 200;
+}
+.logo { display: flex; align-items: center; gap: 0.6rem; text-decoration: none; }
+.logo-glow { font-size: 1.4rem; filter: drop-shadow(0 0 8px var(--red)); }
+.logo-main { font-size: 1.1rem; font-weight: 700; color: var(--text); letter-spacing: -0.01em; display: block; }
+.logo-sub  { font-size: 0.62rem; font-weight: 500; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.12em; display: block; }
+.nav-links { display: flex; gap: 2rem; list-style: none; align-items: center; }
+.nav-links a { text-decoration: none; color: var(--text-mid); font-size: 0.875rem; font-weight: 400; transition: color 0.2s; }
+.nav-links a:hover { color: var(--red); }
+.nav-cta {
+  background: var(--red);
+  color: var(--white) !important;
+  padding: 0.55rem 1.3rem;
+  border-radius: 2rem;
+  font-weight: 700 !important;
+  font-size: 0.85rem !important;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 0 16px rgba(196,28,28,0.3);
+}
+.nav-cta:hover { background: var(--red-light) !important; box-shadow: 0 0 24px rgba(196,28,28,0.45) !important; }
+.hamburger { display: none; background: none; border: none; cursor: pointer; font-size: 1.4rem; color: var(--text); }
+
+/* ── VIDEO HERO ── */
+.hero-video-wrap {
+  position: relative;
+  min-height: 93vh;
+  display: flex; align-items: center;
+  overflow: hidden;
+}
+.hero-video {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover; z-index: 0;
+}
+.hero-overlay {
+  position: absolute; inset: 0; z-index: 1;
+  background: linear-gradient(110deg,
+    rgba(26,8,8,0.88) 0%,
+    rgba(26,8,8,0.72) 55%,
+    rgba(26,8,8,0.2) 100%
+  );
+}
+.hero-content {
+  position: relative; z-index: 2;
+  padding: 5rem 6%;
+  max-width: 680px;
+}
+.hero-pill {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  background: var(--red-pale);
+  border: 1px solid var(--border);
+  border-radius: 2rem; padding: 0.4rem 1rem; margin-bottom: 1.75rem;
+  font-size: 0.8rem; font-weight: 600; color: #FF9090;
+  backdrop-filter: blur(6px);
+}
+.hero-pill .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--red-light); box-shadow: 0 0 6px var(--red-light); }
+.hero-content h1 {
+  font-size: clamp(2.6rem, 5vw, 4.2rem);
+  font-weight: 700; line-height: 1.08;
+  color: var(--white); margin-bottom: 1.25rem;
+  letter-spacing: -0.025em;
+}
+.hero-content h1 em {
+  font-style: normal;
+  background: linear-gradient(90deg, var(--red-light), var(--orange));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.hero-cred {
+  display: flex; align-items: flex-start; gap: 0.75rem;
+  background: rgba(196,28,28,0.08);
+  border-left: 3px solid var(--red-light);
+  border-radius: 0 0.75rem 0.75rem 0;
+  padding: 0.9rem 1.1rem; margin-bottom: 1.5rem;
+  font-size: 0.9rem; color: var(--cream-dim); line-height: 1.65;
+}
+.hero-cred strong { color: var(--cream); }
+.hero-cred-icon { font-size: 1.2rem; flex-shrink: 0; }
+.hero-content > p { color: var(--cream-dim); font-size: 1.05rem; line-height: 1.8; margin-bottom: 2rem; }
+.hero-btns { display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; margin-bottom: 2.75rem; }
+.btn-amber {
+  background: var(--red); color: var(--white);
+  padding: 0.9rem 2rem; border-radius: 2rem;
+  text-decoration: none; font-weight: 700; font-size: 0.95rem;
+  box-shadow: 0 0 20px rgba(196,28,28,0.4);
+  transition: background 0.2s, box-shadow 0.2s;
+}
+.btn-amber:hover { background: var(--red-light); box-shadow: 0 0 30px rgba(196,28,28,0.6); }
+.btn-ghost-white {
+  border: 1.5px solid rgba(248,238,224,0.3); color: var(--cream);
+  padding: 0.9rem 2rem; border-radius: 2rem;
+  text-decoration: none; font-weight: 500; font-size: 0.95rem;
+  transition: border-color 0.2s, background 0.2s;
+}
+.btn-ghost-white:hover { border-color: #FF9090; color: #FF9090; }
+.hero-stats { display: flex; gap: 2.5rem; flex-wrap: wrap; }
+.hs-n { font-size: 1.9rem; font-weight: 700; color: #FF9090; line-height: 1; }
+.hs-l { font-size: 0.72rem; color: var(--cream-muted); margin-top: 0.2rem; text-transform: uppercase; letter-spacing: 0.07em; }
+
+/* ── TRUST BAND ── */
+.trust-band {
+  background: linear-gradient(90deg, #220E0E, #2C1414, #220E0E);
+  border-top: 1px solid rgba(196,28,28,0.2);
+  border-bottom: 1px solid rgba(196,28,28,0.2);
+  padding: 1rem 6%;
+  display: flex; align-items: center; flex-wrap: wrap; overflow: hidden;
+}
+.tb-item { display: flex; align-items: center; gap: 0.6rem; font-size: 0.82rem; font-weight: 600; color: var(--cream-dim); padding: 0.3rem 2rem 0.3rem 0; white-space: nowrap; }
+.tb-item em { color: #FF9090; font-style: normal; }
+.tb-sep { color: rgba(196,28,28,0.35); padding-right: 2rem; }
+
+/* ── CREDENTIAL PHOTOS ── */
+.cred-strip { padding: 4rem 6%; background: var(--dark-mid); }
+.cred-strip-inner { max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.cred-photo-card { border-radius: 1.5rem; overflow: hidden; position: relative; border: 1px solid rgba(196,28,28,0.2); }
+.cred-photo-card img {
+  width: 100%; height: 440px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+  filter: brightness(1.05) contrast(1.05) saturate(1.1);
+}
+.cred-photo-card:hover img { transform: scale(1.03); }
+.cred-photo-card.portrait img { object-position: center 15%; }
+.cred-photo-card.group-shot img { object-position: center 20%; }
+.cred-photo-label {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  background: linear-gradient(to top, rgba(26,8,8,0.92) 0%, rgba(26,8,8,0.4) 60%, transparent 100%);
+  padding: 2.5rem 1.75rem 1.5rem;
+}
+.cpl-tag { font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: #FF9090; margin-bottom: 0.35rem; }
+.cpl-title { font-size: 1.05rem; font-weight: 700; color: var(--white); line-height: 1.3; }
+.cpl-sub { font-size: 0.8rem; color: var(--cream-dim); margin-top: 0.25rem; }
+
+/* ── SECTION HELPERS ── */
+.section-tag {
+  display: inline-block;
+  background: var(--red-pale);
+  border: 1px solid rgba(196,28,28,0.2);
+  color: var(--red);
+  font-size: 0.72rem; font-weight: 700;
+  padding: 0.3rem 0.9rem; border-radius: 2rem;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase; letter-spacing: 0.09em;
+}
+.section-h { font-size: clamp(1.8rem, 2.8vw, 2.4rem); font-weight: 700; color: var(--text); margin-bottom: 0.5rem; letter-spacing: -0.025em; line-height: 1.15; }
+.section-h em { font-style: normal; color: var(--red); }
+.section-sub { font-size: 0.975rem; color: var(--text-mid); line-height: 1.8; max-width: 520px; }
+
+/* ── ABOUT ── */
+.about { padding: 6rem 6%; background: var(--light); }
+.about-inner { max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 5rem; align-items: center; }
+.about-img-wrap { position: relative; }
+.about-img {
+  border-radius: 1.75rem; overflow: hidden;
+  aspect-ratio: 0.82;
+  border: 1px solid var(--border-light);
+  box-shadow: 0 0 60px rgba(196,28,28,0.08);
+}
+.about-img img { width: 100%; height: 100%; object-fit: cover; object-position: center top; filter: brightness(1.05) contrast(1.05) saturate(1.1); }
+.about-badge {
+  position: absolute; bottom: 2rem; right: -1.5rem;
+  background: var(--card-bg);
+  border: 1px solid var(--border-light);
+  border-radius: 1rem; padding: 1rem 1.4rem;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1), 0 0 20px rgba(196,28,28,0.08);
+  text-align: center;
+}
+.badge-n { font-size: 2.2rem; font-weight: 700; color: var(--red); line-height: 1; }
+.badge-l { font-size: 0.7rem; color: var(--text-muted); margin-top: 0.2rem; line-height: 1.3; }
+.about-body { font-size: 0.95rem; color: var(--text-mid); line-height: 1.85; }
+.about-body p { margin-bottom: 1.1rem; }
+.about-body strong { color: var(--text); }
+.about-highlight {
+  background: var(--red-pale);
+  border-left: 3px solid var(--red);
+  border-radius: 0 0.75rem 0.75rem 0;
+  padding: 1rem 1.2rem; margin: 1.25rem 0;
+  font-size: 0.925rem; color: var(--text-mid);
+  line-height: 1.7; font-style: italic;
+}
+.chip-row { display: flex; gap: 0.6rem; margin-top: 1.75rem; flex-wrap: wrap; }
+.chip {
+  background: var(--card-bg);
+  border: 1px solid var(--border-light);
+  border-radius: 2rem; padding: 0.4rem 0.9rem;
+  font-size: 0.78rem; font-weight: 500; color: var(--text-mid);
+  display: flex; align-items: center; gap: 0.4rem;
+  transition: border-color 0.2s, color 0.2s;
+}
+.chip:hover { border-color: var(--red); color: var(--red); }
+
+/* ── SERVICES ── */
+.services { padding: 6rem 6%; background: var(--light-alt); }
+.services-inner { max-width: 1280px; margin: 0 auto; }
+.svc-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; background: var(--border-light); border: 1px solid var(--border-light); border-radius: 1.5rem; overflow: hidden; margin-top: 3rem; }
+.svc {
+  background: var(--card-bg);
+  padding: 2.25rem 2rem;
+  transition: background 0.25s;
+  position: relative;
+}
+.svc::after { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, var(--red), transparent); opacity: 0; transition: opacity 0.25s; }
+.svc:hover { background: #FEF5F5; }
+.svc:hover::after { opacity: 1; }
+.svc-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1.1rem; }
+.svc-icon-wrap { width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; background: var(--red-pale); border: 1px solid rgba(196,28,28,0.18); }
+.svc-arrow { color: var(--border-light); font-size: 1rem; transition: color 0.2s; }
+.svc:hover .svc-arrow { color: var(--red); }
+.svc h3 { font-size: 0.975rem; font-weight: 700; color: var(--text); margin-bottom: 0.4rem; }
+.svc p { font-size: 0.855rem; color: var(--text-mid); line-height: 1.72; }
+
+/* ── WHY ── */
+.why {
+  position: relative;
+  padding: 7rem 6%;
+  overflow: hidden;
+}
+.why-video {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover; z-index: 0;
+}
+.why-overlay {
+  position: absolute; inset: 0; z-index: 1;
+  background: linear-gradient(
+    110deg,
+    rgba(26,8,8,0.93) 0%,
+    rgba(26,8,8,0.82) 50%,
+    rgba(26,8,8,0.7) 100%
+  );
+}
+.why-inner { max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; position: relative; z-index: 2; }
+.why .section-tag { background: rgba(196,28,28,0.15); border-color: rgba(196,28,28,0.4); color: #FF9090; }
+.why .section-h { color: var(--white); }
+.why .section-sub { color: var(--cream-dim); }
+.why-btn { display: inline-block; background: var(--red); color: var(--white); padding: 0.875rem 1.9rem; border-radius: 2rem; text-decoration: none; font-weight: 700; font-size: 0.9rem; box-shadow: 0 0 20px rgba(196,28,28,0.4); margin-top: 2rem; }
+.why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.wg {
+  background: rgba(44,20,20,0.75);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border-dim);
+  border-radius: 1.25rem; padding: 1.5rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.wg:hover { border-color: rgba(196,28,28,0.5); box-shadow: 0 0 20px rgba(196,28,28,0.12); }
+.wg.highlighted { border-color: rgba(196,28,28,0.5); background: rgba(196,28,28,0.1); backdrop-filter: blur(12px); }
+.wg-icon { font-size: 1.6rem; margin-bottom: 0.75rem; }
+.wg h3 { font-size: 0.95rem; font-weight: 700; color: var(--white); margin-bottom: 0.4rem; }
+.wg p { font-size: 0.82rem; color: var(--cream-dim); line-height: 1.65; }
+
+/* ── PRICING ── */
+.pricing { padding: 6rem 6%; background: var(--light); }
+.pricing-inner { max-width: 1280px; margin: 0 auto; }
+.p-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 1.25rem; margin-top: 3rem; }
+.p-card {
+  background: var(--card-bg);
+  border-radius: 1.5rem; padding: 2.1rem;
+  border: 1px solid var(--border-light);
+  position: relative; transition: border-color 0.2s;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+}
+.p-card:hover { border-color: rgba(196,28,28,0.3); }
+.p-card.featured {
+  border-color: var(--red);
+  box-shadow: 0 0 40px rgba(196,28,28,0.1);
+}
+.feat-tag {
+  position: absolute; top: -0.7rem; left: 50%; transform: translateX(-50%);
+  background: var(--red); color: var(--white);
+  font-size: 0.7rem; font-weight: 800; padding: 0.2rem 1rem;
+  border-radius: 2rem; white-space: nowrap; letter-spacing: 0.07em; text-transform: uppercase;
+  box-shadow: 0 0 14px rgba(196,28,28,0.4);
+}
+.p-chip { display: inline-block; background: var(--red-pale); border: 1px solid rgba(196,28,28,0.18); color: var(--red); font-size: 0.7rem; font-weight: 700; padding: 0.2rem 0.75rem; border-radius: 2rem; margin-bottom: 1.1rem; }
+.p-price { font-size: 2.6rem; font-weight: 700; color: var(--text); letter-spacing: -0.04em; line-height: 1; margin-bottom: 0.2rem; }
+.p-price sup { font-size: 1.1rem; font-weight: 400; vertical-align: top; margin-top: 0.5rem; display: inline-block; color: var(--red); }
+.p-price sub { font-size: 0.85rem; font-weight: 400; letter-spacing: 0; color: var(--text-muted); }
+.p-desc { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 1.5rem; line-height: 1.5; }
+.p-feats { list-style: none; margin-bottom: 1.75rem; }
+.p-feats li { font-size: 0.855rem; color: var(--text-mid); padding: 0.45rem 0; border-bottom: 1px solid var(--border-light); display: flex; gap: 0.6rem; align-items: flex-start; }
+.p-feats li::before { content: '—'; color: var(--red); font-weight: 700; flex-shrink: 0; }
+.p-btn { display: block; text-align: center; padding: 0.85rem; border-radius: 2rem; font-weight: 700; font-size: 0.875rem; text-decoration: none; background: var(--light-alt); color: var(--text-mid); border: 1px solid var(--border-light); transition: all 0.2s; }
+.p-btn:hover { border-color: var(--red); color: var(--red); }
+.p-card.featured .p-btn { background: var(--red); color: var(--white); border-color: var(--red); box-shadow: 0 0 16px rgba(196,28,28,0.3); }
+.p-card.featured .p-btn:hover { background: var(--red-light); }
+.p-note { font-size: 0.78rem; color: var(--text-muted); margin-top: 1.5rem; text-align: center; }
+.block-tag {
+  position: absolute; top: -0.7rem; left: 50%; transform: translateX(-50%);
+  background: var(--orange); color: var(--white);
+  font-size: 0.7rem; font-weight: 800; padding: 0.2rem 1rem;
+  border-radius: 2rem; white-space: nowrap; letter-spacing: 0.07em; text-transform: uppercase;
+  box-shadow: 0 0 14px rgba(212,90,26,0.4);
+}
+.p-card.block { border-color: rgba(212,90,26,0.35); }
+.p-card.block .p-chip { color: var(--orange); background: rgba(212,90,26,0.09); border-color: rgba(212,90,26,0.2); }
+.p-card.block .p-price sup { color: var(--orange); }
+.p-card.block .p-feats li::before { color: var(--orange); }
+.p-card.block .p-btn { background: var(--orange); color: var(--white); border-color: var(--orange); box-shadow: 0 0 16px rgba(212,90,26,0.25); }
+.p-card.block .p-btn:hover { background: #E06A2A; }
+
+/* ── TESTIMONIALS ── */
+.testimonials { padding: 6rem 6%; background: var(--light-alt); }
+.testimonials-inner { max-width: 1280px; margin: 0 auto; }
+.t-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.25rem; margin-top: 3rem; }
+.t-card { background: var(--card-bg); border-radius: 1.5rem; padding: 2rem; border: 1px solid var(--border-light); transition: border-color 0.2s; box-shadow: 0 2px 12px rgba(0,0,0,0.04); }
+.t-card:hover { border-color: rgba(196,28,28,0.25); }
+.t-stars { color: var(--red); font-size: 0.85rem; margin-bottom: 0.75rem; letter-spacing: 0.05em; }
+.t-card blockquote { font-size: 0.925rem; line-height: 1.78; color: var(--text-mid); margin-bottom: 1.25rem; font-style: italic; }
+.t-card blockquote::before { content: '"'; color: var(--red); font-size: 1.6rem; line-height: 0; vertical-align: -0.45rem; margin-right: 0.1rem; font-style: normal; }
+.t-person { display: flex; gap: 0.75rem; align-items: center; border-top: 1px solid var(--border-light); padding-top: 1rem; }
+.t-av { width: 38px; height: 38px; border-radius: 50%; background: var(--red-pale); border: 1px solid rgba(196,28,28,0.18); color: var(--red); font-weight: 700; font-size: 0.82rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.t-name { font-size: 0.875rem; font-weight: 700; color: var(--text); }
+.t-role { font-size: 0.775rem; color: var(--text-muted); }
+
+/* ── FAQ ── */
+.faq { padding: 6rem 6%; background: var(--light); }
+.faq-inner { max-width: 1280px; margin: 0 auto; }
+.faq-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-top: 3rem; }
+.faq-item { padding: 1.1rem 0; border-bottom: 1px solid var(--border-light); }
+.faq-q { font-weight: 700; font-size: 0.925rem; color: var(--text); display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; cursor: pointer; }
+.faq-icon { color: var(--red); font-size: 1.1rem; flex-shrink: 0; }
+.faq-a { font-size: 0.875rem; color: var(--text-mid); line-height: 1.78; margin-top: 0.55rem; }
+
+/* ── CONTACT ── */
+.contact { padding: 6rem 6%; background: var(--light-alt); }
+.contact-inner { max-width: 1280px; margin: 3rem auto 0; display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
+.c-info-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-light);
+  border-radius: 1.75rem; padding: 2.25rem;
+  box-shadow: 0 4px 24px rgba(196,28,28,0.06);
+}
+.c-info-card h3 { font-size: 1.15rem; font-weight: 700; color: var(--text); margin-bottom: 0.6rem; }
+.c-info-card p { font-size: 0.9rem; color: var(--text-mid); line-height: 1.75; margin-bottom: 1.5rem; }
+.c-detail-list { list-style: none; }
+.c-detail-list li { display: flex; align-items: flex-start; gap: 0.6rem; font-size: 0.875rem; color: var(--text-mid); padding: 0.5rem 0; border-bottom: 1px solid var(--border-light); }
+.c-detail-list li:last-child { border-bottom: none; }
+.c-icon { font-size: 1rem; flex-shrink: 0; margin-top: 0.05rem; }
+.c-detail-list a { color: var(--text-mid); text-decoration: none; }
+.c-detail-list a:hover { color: var(--red); }
+.form-row { margin-bottom: 1rem; }
+.form-row label { display: block; font-size: 0.78rem; font-weight: 600; margin-bottom: 0.35rem; color: var(--text-mid); letter-spacing: 0.03em; }
+.form-row input, .form-row select, .form-row textarea {
+  width: 100%; padding: 0.8rem 1rem;
+  border: 1.5px solid var(--border-light);
+  border-radius: 0.875rem; font-size: 0.9rem;
+  color: var(--text); background: var(--card-bg);
+  outline: none; transition: border-color 0.2s;
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+}
+.form-row input::placeholder, .form-row textarea::placeholder { color: var(--text-muted); }
+.form-row input:focus, .form-row select:focus, .form-row textarea:focus { border-color: var(--red); box-shadow: 0 0 0 3px rgba(196,28,28,0.08); }
+.form-row select option { background: var(--card-bg); color: var(--text); }
+.form-row textarea { height: 110px; resize: vertical; }
+.form-row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.c-submit {
+  background: var(--red); color: var(--white);
+  border: none; padding: 0.95rem 2rem; border-radius: 2rem;
+  font-size: 0.925rem; font-weight: 700; cursor: pointer;
+  width: 100%; font-family: inherit;
+  box-shadow: 0 0 20px rgba(196,28,28,0.3);
+  transition: background 0.2s, box-shadow 0.2s;
+}
+.c-submit:hover { background: var(--red-light); box-shadow: 0 0 30px rgba(196,28,28,0.5); }
+.form-note { font-size: 0.78rem; color: var(--text-muted); text-align: center; margin-top: 0.75rem; }
+
+/* ── FOOTER ── */
+footer { background: #140606; border-top: 1px solid rgba(196,28,28,0.15); padding: 3rem 6% 2rem; }
+.footer-top { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 2.5rem; }
+.footer-brand p { font-size: 0.82rem; color: var(--cream-muted); line-height: 1.7; margin-top: 0.75rem; max-width: 240px; }
+.footer-col h4 { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: #FF9090; margin-bottom: 1rem; }
+.footer-col ul { list-style: none; }
+.footer-col li { margin-bottom: 0.5rem; }
+.footer-col a { font-size: 0.84rem; color: var(--cream-muted); text-decoration: none; transition: color 0.2s; }
+.footer-col a:hover { color: #FF9090; }
+.footer-bottom { border-top: 1px solid var(--border-dim); padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; }
+.footer-copy, .footer-tagline { font-size: 0.78rem; color: rgba(248,238,224,0.2); }
+.footer-tagline { font-style: italic; }
+
+/* ── GALLERY ── */
+.gallery .section-tag { background: rgba(196,28,28,0.15); border-color: rgba(196,28,28,0.4); color: #FF9090; }
+.gallery .section-h { color: var(--white); }
+.gallery .section-sub { color: var(--cream-dim); }
+.gallery { padding: 6rem 6%; background: var(--dark-mid); }
+.gallery-inner { max-width: 1280px; margin: 0 auto; }
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 300px;
+  gap: 0.875rem;
+  margin-top: 3rem;
+}
+.g-photo { border-radius: 1.25rem; overflow: hidden; position: relative; }
+.g-photo.wide { grid-column: span 2; }
+.g-photo.tall { grid-row: span 2; }
+.g-photo img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; display: block; }
+.g-photo:hover img { transform: scale(1.04); }
+.g-caption {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  background: linear-gradient(to top, rgba(26,8,8,0.82) 0%, transparent 100%);
+  padding: 1.75rem 1.25rem 0.875rem;
+  font-size: 0.8rem; color: var(--cream-dim); line-height: 1.4;
+  opacity: 0; transition: opacity 0.3s;
+}
+.g-photo:hover .g-caption { opacity: 1; }
+
+/* ── MOBILE ── */
+@media (max-width: 900px) {
+  .about-inner, .why-inner, .contact-inner { grid-template-columns: 1fr; }
+  .about-img-wrap { display: none; }
+  .cred-strip-inner { grid-template-columns: 1fr; }
+  .p-grid { grid-template-columns: repeat(2,1fr); }
+  .footer-top { grid-template-columns: 1fr 1fr; }
+  .footer-bottom { flex-direction: column; gap: 0.5rem; text-align: center; }
+}
+@media (max-width: 768px) {
+  .svc-grid { grid-template-columns: 1fr; border-radius: 1rem; }
+  .p-grid, .t-grid, .why-grid { grid-template-columns: 1fr; }
+  .gallery-grid { grid-template-columns: 1fr 1fr; grid-auto-rows: 200px; }
+  .g-photo.wide { grid-column: span 2; }
+  .g-photo.tall { grid-row: auto; }
+  .faq-cols, .form-row-2 { grid-template-columns: 1fr; }
+  .nav-links { display: none; }
+  .hamburger { display: block; }
+  .tb-sep { display: none; }
+  .hero-stats { gap: 1.5rem; }
+  .footer-top { grid-template-columns: 1fr; gap: 1.5rem; }
+  .cred-photo-card img { height: 300px; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="logo">
+    <span class="logo-glow">🌿</span>
+    <span>
+      <span class="logo-main">Con Raquel</span>
+      <span class="logo-sub">Spanish Instruction</span>
+    </span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#testimonials">Reviews</a></li>
+    <li><a href="#contact" class="nav-cta">Book Free Lesson</a></li>
+  </ul>
+  <button class="hamburger" aria-label="Menu">☰</button>
+</nav>
+
+<!-- VIDEO HERO -->
+<section class="hero-video-wrap">
+  <video class="hero-video" id="heroVideo" autoplay muted loop playsinline></video>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-pill"><span class="dot"></span> Rockville, MD · Teaching worldwide for 25+ years</div>
+    <h1>Learn Spanish from someone<br>who's taught it to <em>the world</em></h1>
+    <div class="hero-cred">
+      <span class="hero-cred-icon">🏛️</span>
+      <span>Raquel Alonso Gonzalez has spent over <strong>25 years</strong> teaching Spanish to <strong>U.S. diplomats, USAID professionals, and foreign service officers</strong> at the Department of State — now offering private lessons and group classes to everyone.</span>
+    </div>
+    <p>Whether you're a complete beginner, a student needing help, or an adult learning for travel or career — Raquel's patient, results-driven approach delivers.</p>
+    <div class="hero-btns">
+      <a href="#contact" class="btn-amber">Book Your Free Lesson</a>
+      <a href="#services" class="btn-ghost-white">See All Services →</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hs"><div class="hs-n">25+</div><div class="hs-l">Years Teaching</div></div>
+      <div class="hs"><div class="hs-n">5.0★</div><div class="hs-l">Student Rating</div></div>
+      <div class="hs"><div class="hs-n">Gov't</div><div class="hs-l">Diplomat Clients</div></div>
+      <div class="hs"><div class="hs-n">Global</div><div class="hs-l">Online & In-Person</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAND -->
+<div class="trust-band">
+  <div class="tb-item">🏛️ <em>Trusted by U.S. diplomats & USAID professionals</em></div>
+  <div class="tb-sep">·</div>
+  <div class="tb-item">📅 <em>25+ years of professional instruction</em></div>
+  <div class="tb-sep">·</div>
+  <div class="tb-item">🌍 <em>Students from Maryland to Mexico and beyond</em></div>
+  <div class="tb-sep">·</div>
+  <div class="tb-item">🎓 <em>All ages & levels welcome · First lesson free</em></div>
+</div>
+
+<!-- CREDENTIAL PHOTOS -->
+<section class="cred-strip" id="credentials">
+  <div class="cred-strip-inner">
+    <div class="cred-photo-card portrait">
+      <img src="images/raquel-usaid-hq.jpg" alt="Raquel Alonso Gonzalez at USAID headquarters">
+      <div class="cred-photo-label">
+        <div class="cpl-tag">U.S. Agency for International Development</div>
+        <div class="cpl-title">Teaching at USAID Headquarters</div>
+        <div class="cpl-sub">Washington, D.C. · Government professional instruction</div>
+      </div>
+    </div>
+    <div class="cred-photo-card group-shot">
+      <img src="images/raquel-fsi-hq.jpg" alt="Raquel Alonso Gonzalez at the Foreign Service Institute">
+      <div class="cred-photo-label">
+        <div class="cpl-tag">U.S. Department of State</div>
+        <div class="cpl-title">Foreign Service Institute</div>
+        <div class="cpl-sub">Language & Culture Instructor · Spanish Section</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="about-inner">
+    <div class="about-img-wrap">
+      <div class="about-img">
+        <img src="images/raquel-classroom-portrait-hq.jpg" alt="Raquel Alonso Gonzalez" style="object-position: center 10%;">
+      </div>
+      <div class="about-badge">
+        <div class="badge-n">25+</div>
+        <div class="badge-l">Years<br>Teaching</div>
+      </div>
+    </div>
+    <div>
+      <div class="section-tag">Meet Raquel</div>
+      <h2 class="section-h">A 25-year career built on<br>trust, results, and <em>real</em> Spanish</h2>
+      <div class="about-body">
+        <p>Raquel Alonso Gonzalez is a native Spanish speaker and professional instructor with over <strong>25 years of experience</strong> teaching Spanish at the highest levels — including to U.S. diplomats, <strong>USAID professionals</strong>, and foreign service officers at the <strong>U.S. Department of State's Foreign Service Institute</strong> who need real, functional fluency for their work around the world.</p>
+        <div class="about-highlight">"Spanish is more than a language — it's a door. My job is to help you open it with confidence, whether you're a complete beginner or preparing for your next diplomatic posting."</div>
+        <p>Based in Rockville, Maryland, Raquel teaches in-person locally and online to students across the U.S. and internationally — from Maryland to Mexico and beyond. Her approach is patient, structured, and always tailored to you: your level, your goals, your pace.</p>
+        <p>Raquel teaches students of all ages — elementary school through adult professionals. If you've never spoken a word of Spanish, you're in exactly the right place.</p>
+      </div>
+      <div class="chip-row">
+        <div class="chip">🏛️ USAID & FSI instructor</div>
+        <div class="chip">🌍 Native bilingual speaker</div>
+        <div class="chip">📍 Rockville, MD</div>
+        <div class="chip">💻 Online worldwide</div>
+        <div class="chip">👶 All ages & levels</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery" id="gallery">
+  <div class="gallery-inner">
+    <div class="section-tag">Student Engagement</div>
+    <h2 class="section-h">Learning Spanish — and <em>loving it</em></h2>
+    <p class="section-sub">25+ years of connections, lessons, and laughter. Raquel's students come from every background — diplomats, professionals, students, and lifelong learners.</p>
+    <div class="gallery-grid">
+      <!-- Row 1: wide + normal -->
+      <div class="g-photo wide">
+        <img src="images/gallery-01-hq.jpg" alt="Students with US and Mexican flags" style="object-position: center 30%;">
+        <div class="g-caption">Students celebrating — Mexican Embassy, Washington D.C.</div>
+      </div>
+      <div class="g-photo">
+        <img src="images/gallery-05-hq.jpg" alt="Raquel with students" style="object-position: center 20%;">
+        <div class="g-caption">After class with students</div>
+      </div>
+      <!-- Row 2: normal × 3 -->
+      <div class="g-photo">
+        <img src="images/gallery-02-hq.jpg" alt="Raquel with a student" style="object-position: center 25%;">
+        <div class="g-caption">One-on-one connection</div>
+      </div>
+      <div class="g-photo">
+        <img src="images/gallery-08-hq.jpg" alt="Raquel with students at lunch" style="object-position: center 30%;">
+        <div class="g-caption">Students connecting outside the classroom</div>
+      </div>
+      <div class="g-photo">
+        <img src="images/gallery-03-hq.jpg" alt="Group with Raquel" style="object-position: center 25%;">
+        <div class="g-caption">A long-time class reunion</div>
+      </div>
+      <!-- Row 3: normal + wide -->
+      <div class="g-photo">
+        <img src="images/gallery-09-hq.jpg" alt="Raquel with students and colleagues" style="object-position: center 20%;">
+        <div class="g-caption">With colleagues at the Foreign Service Institute</div>
+      </div>
+      <div class="g-photo wide">
+        <img src="images/gallery-06-hq.jpg" alt="Raquel with government class group" style="object-position: center 25%;">
+        <div class="g-caption">Government professional class — Washington D.C.</div>
+      </div>
+      <!-- Row 4: normal × 3 -->
+      <div class="g-photo">
+        <img src="images/gallery-04-hq.jpg" alt="Students at dinner" style="object-position: center 30%;">
+        <div class="g-caption">Class dinner outing</div>
+      </div>
+      <div class="g-photo">
+        <img src="images/gallery-07-hq.jpg" alt="Students celebrating" style="object-position: center 25%;">
+        <div class="g-caption">End-of-semester celebration</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="services-inner">
+    <div class="section-tag">What Raquel Offers</div>
+    <h2 class="section-h">Six ways to learn Spanish<br>with <em>Raquel</em></h2>
+    <p class="section-sub">From your first "hola" to advanced fluency — there's a path for every learner, every schedule, and every goal.</p>
+    <div class="svc-grid">
+      <div class="svc"><div class="svc-top"><div class="svc-icon-wrap">🎯</div><span class="svc-arrow">↗</span></div><h3>Private Tutoring</h3><p>One-on-one lessons built entirely around you. Raquel designs every session to your specific goals, level, and pace.</p></div>
+      <div class="svc"><div class="svc-top"><div class="svc-icon-wrap">👥</div><span class="svc-arrow">↗</span></div><h3>Group Classes</h3><p>Practice alongside others at the same level. Small, focused groups make learning more dynamic — and more affordable.</p></div>
+      <div class="svc"><div class="svc-top"><div class="svc-icon-wrap">🌱</div><span class="svc-arrow">↗</span></div><h3>Beginner Spanish</h3><p>Never spoken a word of Spanish? Perfect. Raquel's beginner program takes you from zero to confident, step by step.</p></div>
+      <div class="svc"><div class="svc-top"><div class="svc-icon-wrap">📚</div><span class="svc-arrow">↗</span></div><h3>Homework Help</h3><p>Patient, clear support for any Spanish assignment — grammar, essays, or a verb conjugation that's just not clicking.</p></div>
+      <div class="svc"><div class="svc-top"><div class="svc-icon-wrap">💬</div><span class="svc-arrow">↗</span></div><h3>Conversation Practice</h3><p>Guided speaking sessions that take you from nervous to natural. The fastest way to build real, lasting fluency.</p></div>
+      <div class="svc"><div class="svc-top"><div class="svc-icon-wrap">📝</div><span class="svc-arrow">↗</span></div><h3>Exam Preparation</h3><p>Targeted prep for AP Spanish, DELE, SIELE, school finals, and placement exams — with 25 years of professional precision.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="why" id="why">
+  <video class="why-video" autoplay muted loop playsinline>
+    <source src="images/classroom.mp4" type="video/mp4">
+  </video>
+  <div class="why-overlay"></div>
+  <div class="why-inner">
+    <div>
+      <div class="section-tag">Why Choose Raquel</div>
+      <h2 class="section-h">Experience that sets her<br>apart from <em>any</em> other tutor</h2>
+      <p class="section-sub">25 years. Government clients. USAID. The Foreign Service Institute. Students across multiple countries. Raquel brings a depth of experience you simply won't find elsewhere — paired with the warmth of a teacher who genuinely cares.</p>
+      <a href="#contact" class="why-btn">Start with a Free Lesson →</a>
+    </div>
+    <div class="why-grid">
+      <div class="wg highlighted"><div class="wg-icon">🏛️</div><h3>Diplomat-level credentials</h3><p>25+ years teaching USAID staff and foreign service officers — you learn Spanish that works in the real world, not just textbooks.</p></div>
+      <div class="wg"><div class="wg-icon">🤝</div><h3>Patient & encouraging</h3><p>No rush, no judgment. Every level is welcome and every question is answered with care and clarity.</p></div>
+      <div class="wg"><div class="wg-icon">📅</div><h3>Fits your schedule</h3><p>Morning, afternoon, or evening — in-person in Rockville or online from wherever you are.</p></div>
+      <div class="wg"><div class="wg-icon">🎯</div><h3>Fully personalized</h3><p>Every lesson plan is written specifically for you — your level, your goals, your gaps. Nothing generic.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing" id="pricing">
+  <div class="pricing-inner">
+    <div class="section-tag">Pricing</div>
+    <h2 class="section-h">Simple, honest pricing</h2>
+    <p class="section-sub">No contracts. No surprises. Just exceptional instruction at fair rates. Contact Raquel to find what works best for you.</p>
+    <div class="p-grid">
+      <div class="p-card">
+        <div class="p-chip">Single Session</div>
+        <div class="p-price"><sup>$</sup>75<sub>/hour</sub></div>
+        <div class="p-desc">One private lesson — no commitment required.</div>
+        <ul class="p-feats">
+          <li>60-minute private lesson</li>
+          <li>Personalized to your level & goals</li>
+          <li>Post-session notes & recap</li>
+          <li>Easy online or in-person booking</li>
+        </ul>
+        <a href="#contact" class="p-btn">Book a Session</a>
+      </div>
+      <div class="p-card featured">
+        <div class="feat-tag">Most Popular</div>
+        <div class="p-chip">Monthly — Standard</div>
+        <div class="p-price"><sup>$</sup>280<sub>/month</sub></div>
+        <div class="p-desc">4 sessions/month — the ideal pace for steady progress.</div>
+        <ul class="p-feats">
+          <li>4 × 60-minute private lessons</li>
+          <li>Custom learning plan</li>
+          <li>Unlimited homework support</li>
+          <li>Monthly progress report</li>
+        </ul>
+        <a href="#contact" class="p-btn">Get Started</a>
+      </div>
+      <div class="p-card">
+        <div class="p-chip">Monthly — Intensive</div>
+        <div class="p-price"><sup>$</sup>520<sub>/month</sub></div>
+        <div class="p-desc">8 sessions/month — accelerated progress & exam prep.</div>
+        <ul class="p-feats">
+          <li>8 × 60-minute private lessons</li>
+          <li>Full exam prep materials</li>
+          <li>Dedicated conversation sessions</li>
+          <li>Priority scheduling</li>
+        </ul>
+        <a href="#contact" class="p-btn">Go Intensive</a>
+      </div>
+      <div class="p-card block">
+        <div class="block-tag">Custom Pricing</div>
+        <div class="p-chip">Block & Institutional</div>
+        <div class="p-price" style="font-size:1.8rem;">Let's talk</div>
+        <div class="p-desc">Raquel's government and diplomatic clients have been served through long-term block arrangements — 100+ hours, built around your program's needs.</div>
+        <ul class="p-feats">
+          <li>100+ hours of private instruction</li>
+          <li>Full curriculum & program design</li>
+          <li>Flexible institutional scheduling</li>
+          <li>Trusted by USAID & State Dept. clients</li>
+        </ul>
+        <a href="#contact" class="p-btn">Contact Raquel to Discuss</a>
+      </div>
+    </div>
+    <p class="p-note">Group class pricing also available — contact Raquel to discuss what works best for your situation.</p>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials" id="testimonials">
+  <div class="testimonials-inner">
+    <div class="section-tag">Student Reviews</div>
+    <h2 class="section-h">What students & families say</h2>
+    <div class="t-grid">
+      <div class="t-card"><div class="t-stars">★★★★★</div><blockquote>My daughter was failing Spanish in 7th grade. After three months with Raquel, she earned an A — and more importantly, she finally enjoys it. The patience and the method are genuinely exceptional.</blockquote><div class="t-person"><div class="t-av">SM</div><div><div class="t-name">Sarah M.</div><div class="t-role">Parent · Rockville, MD</div></div></div></div>
+      <div class="t-card"><div class="t-stars">★★★★★</div><blockquote>I needed working Spanish for my role with the State Department. Raquel's instruction was professional, structured, and incredibly effective. Within months I was functional in real diplomatic settings.</blockquote><div class="t-person"><div class="t-av">JL</div><div><div class="t-name">James L.</div><div class="t-role">Foreign Service Officer</div></div></div></div>
+      <div class="t-card"><div class="t-stars">★★★★★</div><blockquote>I started as a complete beginner. Raquel made everything feel manageable. She explains things three different ways until it clicks, and never once made me feel embarrassed for asking.</blockquote><div class="t-person"><div class="t-av">AL</div><div><div class="t-name">Aisha L.</div><div class="t-role">Adult learner · Online student</div></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="faq-inner">
+    <div class="section-tag">FAQ</div>
+    <h2 class="section-h">Common questions</h2>
+    <div class="faq-cols">
+      <div>
+        <div class="faq-item"><div class="faq-q">Do I need any Spanish to get started? <span class="faq-icon">+</span></div><div class="faq-a">Not at all — complete beginners are warmly welcome. Raquel starts with a free consultation to understand exactly where you are and what you'd like to achieve.</div></div>
+        <div class="faq-item"><div class="faq-q">How long are sessions and how often? <span class="faq-icon">+</span></div><div class="faq-a">Standard sessions are 60 minutes. Most students take 1–2 lessons per week. Raquel will recommend a cadence based on your goals.</div></div>
+        <div class="faq-item"><div class="faq-q">Are lessons online or in-person? <span class="faq-icon">+</span></div><div class="faq-a">Both. Online via Zoom is available to students anywhere in the world. In-person lessons are available in and around Rockville, MD.</div></div>
+        <div class="faq-item"><div class="faq-q">What ages does Raquel teach? <span class="faq-icon">+</span></div><div class="faq-a">Elementary-age students through adult professionals. Every lesson is adapted to the learner's age, attention span, and goals.</div></div>
+      </div>
+      <div>
+        <div class="faq-item"><div class="faq-q">Can I reschedule or cancel lessons? <span class="faq-icon">+</span></div><div class="faq-a">Yes — with 24 hours notice you can reschedule at no charge. Monthly plans are month-to-month with no long-term commitment.</div></div>
+        <div class="faq-item"><div class="faq-q">Which exams does Raquel prepare students for? <span class="faq-icon">+</span></div><div class="faq-a">AP Spanish Language & Culture, DELE (A1–C2), SIELE, school finals, and university placement exams.</div></div>
+        <div class="faq-item"><div class="faq-q">Which variety of Spanish is taught? <span class="faq-icon">+</span></div><div class="faq-a">Both Latin American and Castilian Spanish, tailored to whichever is most useful for your goals — travel, school, or professional work.</div></div>
+        <div class="faq-item"><div class="faq-q">Is the free trial lesson really free? <span class="faq-icon">+</span></div><div class="faq-a">Yes — completely free, no pressure, no obligation. A chance to meet Raquel, discuss your goals, and see if it's the right fit.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div style="text-align:center; max-width:1280px; margin:0 auto;">
+    <div class="section-tag">Get Started</div>
+    <h2 class="section-h">Your first lesson is <em>free</em></h2>
+    <p class="section-sub" style="max-width:440px; margin:0 auto;">Fill out the form and Raquel will be in touch within 24 hours with scheduling options and a free consultation.</p>
+  </div>
+  <div class="contact-inner">
+    <div class="c-info-card">
+      <h3>Reach Raquel directly 🌿</h3>
+      <p>Raquel responds personally to every inquiry — usually within a few hours.</p>
+      <ul class="c-detail-list">
+        <li><span class="c-icon">👩🏽‍🏫</span> Raquel Alonso Gonzalez</li>
+        <li><span class="c-icon">📞</span> <a href="tel:2022571147">(202) 257-1147</a></li>
+        <li><span class="c-icon">📍</span> Rockville, Maryland (in-person)</li>
+        <li><span class="c-icon">💻</span> Online via Zoom — students worldwide</li>
+        <li><span class="c-icon">⏰</span> Mon–Sat · 8am – 8pm ET</li>
+      </ul>
+    </div>
+    <form id="contactForm">
+      <!-- success state -->
+      <div id="formSuccess" style="display:none; background:rgba(196,28,28,0.07); border:1px solid var(--red); border-radius:1rem; padding:2rem; text-align:center;">
+        <div style="font-size:2.5rem; margin-bottom:0.75rem;">🌿</div>
+        <h3 style="color:var(--red); font-size:1.1rem; margin-bottom:0.4rem;">Message received!</h3>
+        <p style="color:var(--text-mid); font-size:0.9rem; line-height:1.7;">Raquel will be in touch within 24 hours to set up your free lesson. Check your inbox!</p>
+      </div>
+      <!-- error state -->
+      <div id="formError" style="display:none; background:rgba(196,28,28,0.06); border:1px solid rgba(196,28,28,0.3); border-radius:1rem; padding:1rem 1.25rem; margin-bottom:1rem;">
+        <p style="color:var(--red); font-size:0.875rem;">Something went wrong — please try again or call <a href="tel:2022571147" style="color:var(--red);">(202) 257-1147</a> directly.</p>
+      </div>
+      <div id="formFields">
+        <div class="form-row-2">
+          <div class="form-row">
+            <label for="firstName">First Name *</label>
+            <input id="firstName" name="firstName" type="text" placeholder="Maria" required>
+          </div>
+          <div class="form-row">
+            <label for="lastName">Last Name</label>
+            <input id="lastName" name="lastName" type="text" placeholder="Garcia">
+          </div>
+        </div>
+        <div class="form-row">
+          <label for="email">Email Address *</label>
+          <input id="email" name="email" type="email" placeholder="you@email.com" required>
+        </div>
+        <div class="form-row">
+          <label for="phone">Phone (optional)</label>
+          <input id="phone" name="phone" type="tel" placeholder="(555) 000-0000">
+        </div>
+        <div class="form-row">
+          <label for="service">I'm interested in</label>
+          <select id="service" name="service">
+            <option value="">Select a service...</option>
+            <option>Private tutoring</option>
+            <option>Group classes</option>
+            <option>Beginner Spanish course</option>
+            <option>Homework help</option>
+            <option>Conversation practice</option>
+            <option>Exam preparation (AP / DELE / other)</option>
+            <option>I'm not sure yet</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="format">Preferred format</label>
+          <select id="format" name="format">
+            <option value="">Online or in-person?</option>
+            <option>Online (Zoom)</option>
+            <option>In-person (Rockville, MD)</option>
+            <option>Either works for me</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="goals">Tell me about your goals</label>
+          <textarea id="goals" name="goals" placeholder="e.g. My daughter needs help with school Spanish, I want to travel to Mexico, I'm preparing for the DELE exam..."></textarea>
+        </div>
+        <button type="submit" class="c-submit" id="submitBtn">Send Message — I'll reply within 24 hours</button>
+        <p class="form-note">Your first lesson is completely free. No commitment required.</p>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.4rem;">
+        <span style="font-size:1.2rem;filter:drop-shadow(0 0 6px var(--red))">🌿</span>
+        <span style="color:var(--cream);font-size:1rem;font-weight:700;">Con Raquel</span>
+      </div>
+      <div style="font-size:0.62rem;font-weight:500;color:var(--cream-muted);text-transform:uppercase;letter-spacing:0.12em;margin-bottom:0.6rem;">Spanish Instruction</div>
+      <p>25+ years of professional Spanish instruction. Trusted by diplomats and USAID professionals. Now available to everyone.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#services">Private Tutoring</a></li>
+        <li><a href="#services">Group Classes</a></li>
+        <li><a href="#services">Beginner Spanish</a></li>
+        <li><a href="#services">Homework Help</a></li>
+        <li><a href="#services">Conversation Practice</a></li>
+        <li><a href="#services">Exam Prep</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Information</h4>
+      <ul>
+        <li><a href="#about">About Raquel</a></li>
+        <li><a href="#credentials">Credentials</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#testimonials">Reviews</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:2022571147">(202) 257-1147</a></li>
+        <li><a href="#contact">Book Free Lesson</a></li>
+        <li><a href="#contact">Rockville, MD</a></li>
+        <li><a href="#contact">Online · Worldwide</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2025 Con Raquel · Raquel Alonso Gonzalez · All rights reserved</div>
+    <div class="footer-tagline">Spanish that opens the world.</div>
+  </div>
+</footer>
+
+<script>
+  // ── Video background ──────────────────────────────────────────
+  const video = document.getElementById('heroVideo');
+  const hlsSrc = 'https://stream.mux.com/NcU3HlHeF7CUL86azTTzpy3Tlb00d6iF3BmCdFslMJYM.m3u8';
+  if (video.canPlayType('application/vnd.apple.mpegurl')) {
+    video.src = hlsSrc;
+  } else if (Hls.isSupported()) {
+    const hls = new Hls({ autoStartLoad: true, startLevel: -1 });
+    hls.loadSource(hlsSrc);
+    hls.attachMedia(video);
+  }
+
+  // ── Contact form (Web3Forms) ──────────────────────────────────
+  // Get your access key at web3forms.com — enter raquelalonso.maven@gmail.com
+  const W3F_KEY = '1dc59d8e-1288-473d-a557-21d7c8845ab3';
+
+  const form      = document.getElementById('contactForm');
+  const fields    = document.getElementById('formFields');
+  const success   = document.getElementById('formSuccess');
+  const errorBox  = document.getElementById('formError');
+  const submitBtn = document.getElementById('submitBtn');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    errorBox.style.display = 'none';
+
+    const email     = document.getElementById('email').value.trim();
+    const firstName = document.getElementById('firstName').value.trim();
+    if (!firstName || !email) {
+      errorBox.querySelector('p').textContent = 'Please fill in your name and email address.';
+      errorBox.style.display = 'block';
+      return;
+    }
+
+    submitBtn.textContent = 'Sending…';
+    submitBtn.disabled = true;
+
+    if (W3F_KEY === 'YOUR_WEB3FORMS_KEY') {
+      setTimeout(() => { fields.style.display = 'none'; success.style.display = 'block'; }, 800);
+      return;
+    }
+
+    try {
+      const lastName = document.getElementById('lastName').value;
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({
+          access_key:  W3F_KEY,
+          subject:     `New student inquiry — ${firstName} ${lastName}`.trim(),
+          from_name:   'Con Raquel Website',
+          cc:          '2022571147@txt.att.net,2029996426@txt.att.net',
+          name:        `${firstName} ${lastName}`.trim(),
+          email:       email,
+          phone:       document.getElementById('phone').value,
+          service:     document.getElementById('service').value,
+          format:      document.getElementById('format').value,
+          goals:       document.getElementById('goals').value,
+        }),
+      });
+
+      const data = await res.json();
+      console.log('[Web3Forms response]', data);
+      if (data.success) {
+        fields.style.display = 'none';
+        success.style.display = 'block';
+      } else {
+        throw new Error(data.message || 'Submit failed');
+      }
+    } catch (err) {
+      console.error('[Web3Forms error]', err);
+      errorBox.style.display = 'block';
+      submitBtn.textContent = 'Send Message — I\'ll reply within 24 hours';
+      submitBtn.disabled = false;
+    }
+  });
+</script>
+</body>
+</html>
