@@ -351,6 +351,7 @@ nav {
 .testimonials-inner { max-width: 1280px; margin: 0 auto; }
 .t-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.25rem; margin-top: 3rem; }
 .t-card { background: var(--card-bg); border-radius: 1.5rem; padding: 2rem; border: 1px solid var(--border-light); transition: border-color 0.2s; box-shadow: 0 2px 12px rgba(0,0,0,0.04); }
+.t-card.wide { grid-column: span 2; }
 .t-card:hover { border-color: rgba(196,28,28,0.25); }
 .t-stars { color: var(--red); font-size: 0.85rem; margin-bottom: 0.75rem; letter-spacing: 0.05em; }
 .t-card blockquote { font-size: 0.925rem; line-height: 1.78; color: var(--text-mid); margin-bottom: 1.25rem; font-style: italic; }
@@ -464,6 +465,7 @@ footer { background: #140606; border-top: 1px solid rgba(196,28,28,0.15); paddin
 @media (max-width: 768px) {
   .svc-grid { grid-template-columns: 1fr; border-radius: 1rem; }
   .p-grid, .t-grid, .why-grid { grid-template-columns: 1fr; }
+  .t-card.wide { grid-column: auto; }
   .gallery-grid { grid-template-columns: 1fr 1fr; grid-auto-rows: 200px; }
   .g-photo.wide { grid-column: span 2; }
   .g-photo.tall { grid-row: auto; }
@@ -744,11 +746,13 @@ footer { background: #140606; border-top: 1px solid rgba(196,28,28,0.15); paddin
 <section class="testimonials" id="testimonials">
   <div class="testimonials-inner">
     <div class="section-tag">Student Reviews</div>
-    <h2 class="section-h">What students & families say</h2>
+    <h2 class="section-h">What students & colleagues say</h2>
     <div class="t-grid">
-      <div class="t-card"><div class="t-stars">★★★★★</div><blockquote>My daughter was failing Spanish in 7th grade. After three months with Raquel, she earned an A — and more importantly, she finally enjoys it. The patience and the method are genuinely exceptional.</blockquote><div class="t-person"><div class="t-av">SM</div><div><div class="t-name">Sarah M.</div><div class="t-role">Parent · Rockville, MD</div></div></div></div>
-      <div class="t-card"><div class="t-stars">★★★★★</div><blockquote>I needed working Spanish for my role with the State Department. Raquel's instruction was professional, structured, and incredibly effective. Within months I was functional in real diplomatic settings.</blockquote><div class="t-person"><div class="t-av">JL</div><div><div class="t-name">James L.</div><div class="t-role">Foreign Service Officer</div></div></div></div>
-      <div class="t-card"><div class="t-stars">★★★★★</div><blockquote>I started as a complete beginner. Raquel made everything feel manageable. She explains things three different ways until it clicks, and never once made me feel embarrassed for asking.</blockquote><div class="t-person"><div class="t-av">AL</div><div><div class="t-name">Aisha L.</div><div class="t-role">Adult learner · Online student</div></div></div></div>
+      <div class="t-card"><div class="t-stars">★★★★★</div><blockquote>Raquel is an exceptionally conscientious teacher who truly invests in her students' learning progress — and she does so with joy and enthusiasm. Her methods are practical, and even in moments of frustration and confusion they are all the more rewarding. In a relatively short period of time I noticed rapid gains, but more importantly, a new passion for a language I should have learned long ago. You are in excellent hands with Raquel — an experienced professional who has given voice to countless unsung heroes in the U.S. Foreign Service.</blockquote><div class="t-person"><div class="t-av">S</div><div><div class="t-name">Sean</div><div class="t-role">Student · U.S. Foreign Service</div></div></div></div>
+      <div class="t-card"><div class="t-stars">★★★★★</div><blockquote>I have worked with Raquel for many years and seen all of her students succeed in language tests at the Foreign Service Institute! She is not only knowledgeable, but accurate in identifying the needs of her students!</blockquote><div class="t-person"><div class="t-av">M</div><div><div class="t-name">Maria</div><div class="t-role">Foreign Service Institute</div></div></div></div>
+      <div class="t-card"><div class="t-stars">★★★★★</div><blockquote>Raquel Alonso is a highly qualified Spanish instructor with 10+ years of experience teaching U.S. diplomats in preparation for their missions overseas. Her classes are focused on strengthening your speaking skills and expanding your cultural knowledge!</blockquote><div class="t-person"><div class="t-av">R</div><div><div class="t-name">Rosa</div><div class="t-role">Foreign Service Institute</div></div></div></div>
+      <div class="t-card"><div class="t-stars">★★★★★</div><blockquote>Raquel has worked with me for a very long time, and she has prepared many students from government agencies to achieve their final goals and reach high proficiency in Spanish. I recommend working with Raquel — her students' success is guaranteed.</blockquote><div class="t-person"><div class="t-av">G</div><div><div class="t-name">Giovanna</div><div class="t-role">Fellow Spanish teacher</div></div></div></div>
+      <div class="t-card wide"><div class="t-stars">★★★★★</div><blockquote>Raquel taught me Spanish one-on-one for nearly six months to prepare for the Foreign Service Institute Spanish exam required for diplomats with assignments overseas. Thanks to her outstanding tutelage, I passed on the first try! Aside from her excellent teaching skills, Raquel is an incredible person and makes classes feel like a joy to attend. I spent 6 hours a day with her talking in Spanish, and we became so close that I now count her as one of my dearest friends. This is what you want in a teacher: someone who motivates you, challenges you, prepares you to succeed with your language goals, and makes you WANT to show up each day for class. I adore Raquel, and I know you will as well. She is dynamic, fun, serious when necessary, and an outstanding teacher. Besos y abrazos desde El Salvador!</blockquote><div class="t-person"><div class="t-av">A</div><div><div class="t-name">Ashley</div><div class="t-role">U.S. diplomat · El Salvador</div></div></div></div>
     </div>
   </div>
 </section>
