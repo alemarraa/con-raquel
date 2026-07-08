@@ -296,6 +296,44 @@ nav {
 .wg h3 { font-size: 0.95rem; font-weight: 700; color: var(--white); margin-bottom: 0.4rem; }
 .wg p { font-size: 0.82rem; color: var(--cream-dim); line-height: 1.65; }
 
+/* ── FSI EXAM ── */
+.fsi { padding: 6rem 6%; background: var(--light-alt); }
+.fsi-inner { max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 5rem; align-items: center; }
+.fsi-tests { display: grid; gap: 1rem; margin-top: 1.75rem; }
+.fsi-test {
+  background: var(--card-bg); border: 1px solid var(--border-light);
+  border-radius: 1.25rem; padding: 1.25rem 1.5rem;
+  display: flex; gap: 1rem; align-items: flex-start;
+  transition: border-color 0.2s;
+}
+.fsi-test:hover { border-color: rgba(196,28,28,0.3); }
+.fsi-test-icon { width: 42px; height: 42px; border-radius: 50%; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 1.15rem; background: var(--red-pale); border: 1px solid rgba(196,28,28,0.18); }
+.fsi-test h3 { font-size: 0.925rem; font-weight: 700; color: var(--text); margin-bottom: 0.25rem; }
+.fsi-test p { font-size: 0.845rem; color: var(--text-mid); line-height: 1.7; }
+.ilr-card {
+  background: var(--card-bg); border: 1px solid var(--border-light);
+  border-radius: 1.5rem; padding: 2.25rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+}
+.ilr-card h3 { font-size: 1.05rem; font-weight: 700; color: var(--text); margin-bottom: 0.4rem; }
+.ilr-card > p { font-size: 0.855rem; color: var(--text-mid); line-height: 1.7; }
+.ilr-scale { display: flex; gap: 0.5rem; margin-top: 2.2rem; }
+.ilr-step {
+  flex: 1; text-align: center; padding: 0.85rem 0;
+  border-radius: 0.75rem; background: var(--light-alt);
+  border: 1px solid var(--border-light);
+  font-weight: 700; font-size: 1rem; color: var(--text-muted);
+  position: relative;
+}
+.ilr-step.target { background: var(--red); border-color: var(--red); color: var(--white); box-shadow: 0 0 18px rgba(196,28,28,0.35); }
+.ilr-target-tag {
+  position: absolute; top: -1.5rem; left: 50%; transform: translateX(-50%);
+  font-size: 0.58rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em;
+  color: var(--red); white-space: nowrap;
+}
+.ilr-legend { font-size: 0.78rem; color: var(--text-muted); margin-top: 1rem; line-height: 1.6; }
+.ilr-legend strong { color: var(--red); }
+
 /* ── PRICING ── */
 .pricing { padding: 6rem 6%; background: var(--light); }
 .pricing-inner { max-width: 1280px; margin: 0 auto; }
@@ -455,7 +493,7 @@ footer { background: #140606; border-top: 1px solid rgba(196,28,28,0.15); paddin
 
 /* ── MOBILE ── */
 @media (max-width: 900px) {
-  .about-inner, .why-inner, .contact-inner { grid-template-columns: 1fr; }
+  .about-inner, .why-inner, .contact-inner, .fsi-inner { grid-template-columns: 1fr; }
   .about-img-wrap { display: none; }
   .cred-strip-inner { grid-template-columns: 1fr; }
   .p-grid { grid-template-columns: repeat(2,1fr); }
@@ -653,7 +691,7 @@ footer { background: #140606; border-top: 1px solid rgba(196,28,28,0.15); paddin
       <div class="svc"><div class="svc-top"><div class="svc-icon-wrap">🌱</div><span class="svc-arrow">↗</span></div><h3>Beginner Spanish</h3><p>Never spoken a word of Spanish? Perfect. Raquel's beginner program takes you from zero to confident, step by step.</p></div>
       <div class="svc"><div class="svc-top"><div class="svc-icon-wrap">📚</div><span class="svc-arrow">↗</span></div><h3>Homework Help</h3><p>Patient, clear support for any Spanish assignment — grammar, essays, or a verb conjugation that's just not clicking.</p></div>
       <div class="svc"><div class="svc-top"><div class="svc-icon-wrap">💬</div><span class="svc-arrow">↗</span></div><h3>Conversation Practice</h3><p>Guided speaking sessions that take you from nervous to natural. The fastest way to build real, lasting fluency.</p></div>
-      <div class="svc"><div class="svc-top"><div class="svc-icon-wrap">📝</div><span class="svc-arrow">↗</span></div><h3>Exam Preparation</h3><p>Targeted prep for AP Spanish, DELE, SIELE, school finals, and placement exams — with 25 years of professional precision.</p></div>
+      <div class="svc"><div class="svc-top"><div class="svc-icon-wrap">📝</div><span class="svc-arrow">↗</span></div><h3>Exam Preparation</h3><p>Targeted prep for the FSI/ILR exam taken by diplomats, plus AP Spanish, DELE, SIELE, school finals, and placement exams.</p></div>
     </div>
   </div>
 </section>
@@ -676,6 +714,34 @@ footer { background: #140606; border-top: 1px solid rgba(196,28,28,0.15); paddin
       <div class="wg"><div class="wg-icon">🤝</div><h3>Patient & encouraging</h3><p>No rush, no judgment. Every level is welcome and every question is answered with care and clarity.</p></div>
       <div class="wg"><div class="wg-icon">📅</div><h3>Fits your schedule</h3><p>Morning, afternoon, or evening — in-person in Rockville or online from wherever you are.</p></div>
       <div class="wg"><div class="wg-icon">🎯</div><h3>Fully personalized</h3><p>Every lesson plan is written specifically for you — your level, your goals, your gaps. Nothing generic.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FSI EXAM PREP -->
+<section class="fsi" id="fsi-exam">
+  <div class="fsi-inner">
+    <div>
+      <div class="section-tag">Her Specialty</div>
+      <h2 class="section-h">Preparation for the official<br><em>FSI language exam</em></h2>
+      <p class="section-sub">The Foreign Service Institute (FSI) language proficiency assessment evaluates speaking and reading, with scores reported on the Interagency Language Roundtable (ILR) 0–5 scale. Raquel has spent 25+ years preparing U.S. diplomats and USAID professionals for this exact test — and her students pass.</p>
+      <div class="fsi-tests">
+        <div class="fsi-test"><div class="fsi-test-icon">🗣️</div><div><h3>Speaking Test</h3><p>Oral Proficiency Interview (OPI) format — Raquel drills you with the same style of structured conversation, so exam day feels familiar.</p></div></div>
+        <div class="fsi-test"><div class="fsi-test-icon">📖</div><div><h3>Reading Test</h3><p>Comprehension of authentic Spanish-language texts — trained through targeted practice with real-world diplomatic and news material.</p></div></div>
+      </div>
+    </div>
+    <div class="ilr-card">
+      <h3>The ILR Scale</h3>
+      <p>Proficiency is scored from 0 to 5. Most diplomats must reach <strong style="color:var(--red);">Level 3</strong> — Professional Working Proficiency — to qualify for their overseas assignment.</p>
+      <div class="ilr-scale">
+        <div class="ilr-step">0</div>
+        <div class="ilr-step">1</div>
+        <div class="ilr-step">2</div>
+        <div class="ilr-step target"><span class="ilr-target-tag">Diplomat Target</span>3</div>
+        <div class="ilr-step">4</div>
+        <div class="ilr-step">5</div>
+      </div>
+      <p class="ilr-legend"><strong>Level 3</strong> = Professional Working Proficiency · Speaking &amp; Reading are tested and scored separately (e.g. S-3 / R-3).</p>
     </div>
   </div>
 </section>
@@ -771,7 +837,7 @@ footer { background: #140606; border-top: 1px solid rgba(196,28,28,0.15); paddin
       </div>
       <div>
         <div class="faq-item"><div class="faq-q">Can I reschedule or cancel lessons? <span class="faq-icon">+</span></div><div class="faq-a">Yes — with 24 hours notice you can reschedule at no charge. Monthly plans are month-to-month with no long-term commitment.</div></div>
-        <div class="faq-item"><div class="faq-q">Which exams does Raquel prepare students for? <span class="faq-icon">+</span></div><div class="faq-a">AP Spanish Language & Culture, DELE (A1–C2), SIELE, school finals, and university placement exams.</div></div>
+        <div class="faq-item"><div class="faq-q">Which exams does Raquel prepare students for? <span class="faq-icon">+</span></div><div class="faq-a">The FSI language proficiency exam (ILR scale) required of U.S. diplomats — her specialty — plus AP Spanish Language & Culture, DELE (A1–C2), SIELE, school finals, and university placement exams.</div></div>
         <div class="faq-item"><div class="faq-q">Which variety of Spanish is taught? <span class="faq-icon">+</span></div><div class="faq-a">Both Latin American and Castilian Spanish, tailored to whichever is most useful for your goals — travel, school, or professional work.</div></div>
         <div class="faq-item"><div class="faq-q">Is the free trial lesson really free? <span class="faq-icon">+</span></div><div class="faq-a">Yes — completely free, no pressure, no obligation. A chance to meet Raquel, discuss your goals, and see if it's the right fit.</div></div>
       </div>
